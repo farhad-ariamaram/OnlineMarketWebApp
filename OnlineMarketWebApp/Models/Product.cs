@@ -11,5 +11,7 @@ namespace OnlineMarketWebApp.Models
         public string Name { get; set; }
         public string Detail { get; set; }
         public long Price { get; set; }
+        public DateTime SubmitDate { get; set; }
+        public string Image { get; set; }
     }
 }

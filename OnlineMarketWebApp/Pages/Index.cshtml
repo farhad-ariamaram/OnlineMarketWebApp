@@ -4,7 +4,150 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<section class="banner_part">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <div class="banner_text">
+                    <div class="banner_text_iner">
+                        <h1>
+                            @Model.banner.Title
+                        </h1>
+                        <p>@Model.banner.Detail</p>
+                        <a href="product_list.html" class="btn_1">همین الان خرید کنید</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner_img">
+        <img src="img/@Model.banner.Image" alt="#" class="img-fluid">
+        <img src="img/banner_pattern.png " alt="#" class="pattern_img img-fluid">
+    </div>
+</section>
+
+<section class="single_product_list">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                @foreach (var item in Model.HomeProducts)
+                {
+                    <div class="single_product_iner">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="single_product_img">
+                                    <img src="img/@item.Image" class="img-fluid" alt="#">
+                                    <img src="img/product_overlay.png" alt="#" class="product_overlay img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-sm-6">
+                                <div class="single_product_content">
+                                    <h5>شروع قیمت از @item.Lprice تومان</h5>
+                                    <h2> <a href="single-product.html"></a> @item.Description</h2>
+                                    <a href="product_list.html" class="btn_3">امتحان کنید</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trending_items">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_tittle text-center">
+                    <h2>محصولات جدید</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            @foreach (var item in Model.Products)
+            {
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_product_item">
+                        <div class="single_product_item_thumb">
+                            <img src="img/tranding_item/@item.Image" alt="#" class="img-fluid">
+                        </div>
+                        <h3>
+                            <a href="single-product.html">
+                                @item.Detail
+                            </a>
+                        </h3>
+                        <p>@item.Price تومان</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="client_review " style="direction: ltr">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="client_review_slider owl-carousel ">
+                    @foreach (var item in Model.Sliders)
+                    {
+                        <div class="single_client_review" dir="rtl">
+                            <div class="client_img">
+                                <img src="img/@item.Image" alt="#">
+                            </div>
+                            <p>@item.Title</p>
+                            <h5>@item.SubText</h5>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feature_part section_padding">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6">
+                <div class="feature_part_tittle">
+                    <h3>با استفاده از مواد ارگانیک، محصولات استانداردی در اینجا تولید می شود.</h3>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="feature_part_content">
+                    <p>شرکت ما با بهره گیری از استراتژی های مختلف و استفاده از مواد ارگانیک و طبیعی سعی در تولید محصولاتی با کیفیت و مطابق نیاز شما دارد.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_feature_part">
+                    <img src="img/icon/feature_icon_1.svg" alt="#">
+                    <h4>پشتیبانی کارت های اعتباری</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_feature_part">
+                    <img src="img/icon/feature_icon_2.svg" alt="#">
+                    <h4>سفارش آنلاین</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_feature_part">
+                    <img src="img/icon/feature_icon_3.svg" alt="#">
+                    <h4>تحویل رایگان</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_feature_part">
+                    <img src="img/icon/feature_icon_4.svg" alt="#">
+                    <h4>محصولات همراه با جایزه</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
