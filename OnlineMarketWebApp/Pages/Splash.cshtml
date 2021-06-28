@@ -1,0 +1,77 @@
+﻿@page
+@model OnlineMarketWebApp.Pages.SplashModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <title>فروشگاه آنلاین</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/lib/Bootstrap4RTL/dist/css/bootstrap-rtl.css" rel="stylesheet" />
+    <style>
+        .splash-body {
+            background: url(/img/splash-background.png) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .border {
+            position: fixed;
+            top: 0;
+            left: 0;
+            border: 6px solid #000;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            position: fixed;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .logo-image {
+            width: 35vw;
+            height: 35vw;
+        }
+
+        .market-name {
+            position: fixed;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body dir="rtl" class="splash-body">
+    <div class="container h-100">
+        <div class="row justify-content-center">
+            <img class="logo-image" src="~/img/logo.png" />
+        </div>
+        <div class="row justify-content-center">
+            <h1>فروشگاه آنلاین</h1>
+        </div>
+        <div class="row justify-content-center">
+            <h2>Online Market</h2>
+        </div>
+        <div class="row justify-content-center">
+            <img class="logo-image" src="~/img/loading.gif" />
+        </div>
+        <div class="row justify-content-center">
+            <h4>نسخه 1.0.0</h4>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/Bootstrap4RTL/dist/js/bootstrap.js"></script>
+
+</body>
+</html>
