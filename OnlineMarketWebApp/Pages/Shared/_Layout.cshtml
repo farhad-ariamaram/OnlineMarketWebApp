@@ -6,40 +6,53 @@
     <title>@ViewData["Title"] - GuardWebApp</title>
     <link href="~/lib/Bootstrap4RTL/dist/css/bootstrap-rtl.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="~/lib/sidemenu/app.css" rel="stylesheet" />
+    <link href="~/lib/sidemenu/side-drawer.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-page="/Index">سیستم نگهبانی</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="btn btn-light" asp-page="/ScanPage/Index">اسکن بارکد</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="btn btn-light dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                تعاریف
+        <div id="side-drawer" class="position-fixed">
+            <div class="h-100 bg-white">
+                <!-- Side Drawer Title -->
+                <div class="p-4 bg-dark">
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/img/profile.png" height="50" width="50" />
+                                <h1 class="text-white">نام کاربری</h1>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" asp-page="/LocationPage/Index"><i class="far fa-compass"></i>&nbsp;مکان</a>
-                                <a class="dropdown-item" asp-page="/LocationDetailPage/Index"><i class="far fa-directions"></i>&nbsp;جزئیات مکان</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" asp-page="/RunPage/Index"><i class="far fa-play-circle"></i>&nbsp;اجرا</a>
-                                <a class="dropdown-item" asp-page="/RunDetailPage/Index"><i class="far fa-reply-all"></i>&nbsp;جزئیات اجرا</a>
-                                <a class="dropdown-item" asp-page="/RunStatusPage/Index"><i class="far fa-retweet"></i>&nbsp;وضعیت اجرا</a>
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="col-6 text-left">
+                            <a href="#">
+                                <i class="fa fa-angle-right fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
+                <!-- Side Drawer Links -->
+                <ul id="links" class="list-group" onclick="closeSideDrawer()">
+                    <a id="link-structure" href="#" class="list-group-item list-group-item-action border-0 rounded-0">jQuery</a>
+                    <a id="link-css" href="#" class="list-group-item list-group-item-action border-0 rounded-0 active">Script</a>
+                    <a id="link-javascript" href="#" class="list-group-item list-group-item-action border-0 rounded-0">.Net</a>
+                    <a id="link-customization" href="#" class="list-group-item list-group-item-action border-0 rounded-0">Demo Page</a>
+                </ul>
             </div>
+        </div>
+        <div id="side-drawer-void" class="position-fixed d-none" onclick="closeSideDrawer()"></div>
+        <!-- End Side Drawer -->
+        <!-- Begin Top Navbar -->
+        <nav class="navbar navbar-dark bg-primary fixed-top">
+            <button class="navbar-toggler" type="button" onclick="openSideDrawer()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <span class="navbar-text">
+                Project Name &copy; 2020
+            </span>
         </nav>
+
     </header>
 
     <div class="container">
@@ -57,6 +70,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/Bootstrap4RTL/dist/js/bootstrap.bundle.js"></script>
     <script src="~/lib/font-awesome/js/all.min.js"></script>
+    <script src="~/lib/sidemenu/side_drawer.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
