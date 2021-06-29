@@ -1,9 +1,9 @@
 #side-drawer {
     height: 100vh;
-    width: 336px;  /*Ideal width for sidebar accdg to https://forums.envato.com/t/standard-sidebar-width/75633*/
+    width: 336px;
     top: 0;
     right: -336px;
-    z-index: 1032;  /*z-index of standard bootstrap navbar is 1030 + 1 offset due to side-drawer-void*/
+    z-index: 1032; 
     transition: left 0.25s ease;
 }
 
@@ -11,6 +11,6 @@
     height: 100%;
     width: 100%;
     top: 0;
-    z-index: 1031;  /*z-index of standard bootstrap navbar is 1030*/
+    z-index: 1031;
     background: rgba(0,0,0,.6);
 }

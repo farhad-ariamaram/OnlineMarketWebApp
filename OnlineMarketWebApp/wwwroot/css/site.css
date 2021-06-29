@@ -141,3 +141,33 @@ body {
         color: white;
         text-decoration: none !important;
     }
+
+/*bottom nav bar*/
+.bnavbar {
+    background-color: #e84f47;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+    .bnavbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .bnavbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .bnavbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }

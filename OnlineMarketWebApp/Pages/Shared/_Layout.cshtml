@@ -14,45 +14,40 @@
     <header>
         <div id="side-drawer" class="position-fixed">
             <div class="h-100 bg-white">
-                <!-- Side Drawer Title -->
-                <div class="p-4 bg-dark">
+                <div class="p-4 bg-warning">
                     <div class="row">
-                        <div class="col-6">
-                            <a href="#">
+                        <div class="col-10 text-center">
+                            <div>
                                 <img src="~/img/profile.png" height="50" width="50" />
                                 <h1 class="text-white">نام کاربری</h1>
-                            </a>
+                            </div>
                         </div>
-                        <div class="col-6 text-left">
-                            <a href="#">
-                                <i class="fa fa-angle-right fa-2x"></i>
-                            </a>
+                        <div class="col-2 text-left">
+                            <i class="fa fa-angle-right fa-2x text-white" onclick="closeSideDrawer()"></i>
                         </div>
                     </div>
-                    
-                    
                 </div>
-                <!-- Side Drawer Links -->
                 <ul id="links" class="list-group" onclick="closeSideDrawer()">
-                    <a id="link-structure" href="#" class="list-group-item list-group-item-action border-0 rounded-0">jQuery</a>
-                    <a id="link-css" href="#" class="list-group-item list-group-item-action border-0 rounded-0 active">Script</a>
-                    <a id="link-javascript" href="#" class="list-group-item list-group-item-action border-0 rounded-0">.Net</a>
-                    <a id="link-customization" href="#" class="list-group-item list-group-item-action border-0 rounded-0">Demo Page</a>
+                    <li id="link-structure" class="list-group-item list-group-item-action border-0 rounded-0"><i class="fa fa-user ml-2"></i>پنل کاربری</li>
+                    <li id="link-css" class="list-group-item list-group-item-action border-0 rounded-0"><i class="fa fa-shopping-basket ml-2"></i>سبد خرید</li>
+                    <li id="link-javascript" class="list-group-item list-group-item-action border-0 rounded-0"><i class="fa fa-plus-circle ml-2"></i>جدیدترین محصولات</li>
+                    <li id="link-customization" class="list-group-item list-group-item-action border-0 rounded-0"><i class="fa fa-headphones ml-2"></i>پشتیبانی</li>
                 </ul>
             </div>
         </div>
         <div id="side-drawer-void" class="position-fixed d-none" onclick="closeSideDrawer()"></div>
-        <!-- End Side Drawer -->
-        <!-- Begin Top Navbar -->
-        <nav class="navbar navbar-dark bg-primary fixed-top">
-            <button class="navbar-toggler" type="button" onclick="openSideDrawer()">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <span class="navbar-text">
-                Project Name &copy; 2020
-            </span>
+        <nav class="navbar navbar-dark bg-warning fixed-top">
+            <div class="text-white-50" onclick="openSideDrawer()">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+            <div class="text-white">
+                <span style="font-size:25px">فروشگاه آنلاین</span>
+            </div>
+            <div class="text-white-50">
+                <i class="fa fa fa-shopping-basket fa-2x ml-3"></i>
+                <i class="fa fa-search fa-2x"></i>
+            </div>
         </nav>
-
     </header>
 
     <div class="container">
@@ -61,9 +56,31 @@
         </main>
     </div>
 
-    <footer class="footer text-muted fixedButton">
-        <div class="container">
-            @await RenderSectionAsync("BottomPanel", required: false)
+    <footer>
+        <div class="bnavbar">
+            <div class="row">
+                <div class="col-4 d-flex justify-content-center">
+                    <a href="#home">
+                        <i class="fa fa-home"></i>
+                        <br />
+                        خانه
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                    <a href="#home">
+                        <i class="fa fa-list"></i>
+                        <br />
+                        دسته بندی
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                    <a href="#home">
+                        <i class="fa fa-star"></i>
+                        <br />
+                        برند ها
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
