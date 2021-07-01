@@ -203,3 +203,23 @@ body {
 .badge-text {
     font-size: 15px;
 }
+
+
+
+
+.outer2 {
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+    .outer2::-webkit-scrollbar {
+        display: none;
+    }
+
+    .outer2 div {
+        float: none;
+        display: inline-block;
+    }
