@@ -177,3 +177,25 @@ body {
     overflow: auto;
     white-space: nowrap;
 }
+
+.badge{
+    height:110%;
+    width:110%;
+}
+
+.outer {
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+    .outer::-webkit-scrollbar {
+        display: none;
+    }
+
+    .outer h3 {
+        float: none;
+        display: inline-block;
+    }
