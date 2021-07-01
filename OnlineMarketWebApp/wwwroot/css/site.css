@@ -199,3 +199,7 @@ body {
         float: none;
         display: inline-block;
     }
+
+.badge-text {
+    font-size: 15px;
+}
