@@ -1,0 +1,65 @@
+﻿
+@font-face {
+    font-family: 'Yekan';
+    src: url('../font/Yekan.woff') format('woff');
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Yellowtail-Regular';
+    src: url('../font/Yellowtail-Regular.ttf') format('truetype');
+}
+
+* {
+    font-family: Yekan
+}
+
+.eng {
+    font-family: Yellowtail-Regular
+}
+
+.splash-body {
+    background: url(../img/splash-background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.border1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 4px solid #d1d1d1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .border1:after {
+        background: linear-gradient(to right, #bcbcbc 25%, #ffcd02 25%, #ffcd02 50%, #e84f47 50%, #e84f47 75%, #65c1ac 75%);
+        position: absolute;
+        content: '';
+        height: 4px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+.logo-image {
+    width: 250px;
+    height: 250px;
+}
+
+.loading-image {
+    width: 75px;
+    height: 75px;
+}
+
+.version-text {
+    color: #65c1ac;
+}
+
+
