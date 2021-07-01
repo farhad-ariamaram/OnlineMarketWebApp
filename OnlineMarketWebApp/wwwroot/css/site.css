@@ -171,3 +171,9 @@ body {
             background-color: #04AA6D;
             color: white;
         }
+
+/*custom css*/
+.oneLineForce {
+    overflow: auto;
+    white-space: nowrap;
+}
