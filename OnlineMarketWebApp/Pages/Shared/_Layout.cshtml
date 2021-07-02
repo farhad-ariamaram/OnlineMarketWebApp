@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - GuardWebApp</title>
+    <link href="manifest.json" rel="manifest" />
     <link href="~/lib/Bootstrap4RTL/dist/css/bootstrap-rtl.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
     <link href="~/lib/sidemenu/app.css" rel="stylesheet" />
@@ -98,7 +99,11 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/Bootstrap4RTL/dist/js/bootstrap.bundle.js"></script>
     <script src="~/lib/font-awesome/js/all.min.js"></script>
