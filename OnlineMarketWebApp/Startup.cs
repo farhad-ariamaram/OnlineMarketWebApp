@@ -1,11 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OnlineMarketWebApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +22,7 @@ namespace OnlineMarketWebApp
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<OnlineMarketDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CS")));
+            //services.AddDbContext<OnlineMarketDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CS")));
             services.AddRazorPages();
         }
 
