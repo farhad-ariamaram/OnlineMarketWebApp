@@ -46,15 +46,28 @@
             </div>
             <div class="text-white-50">
                 <i class="fa fa fa-shopping-basket fa-2x ml-3"></i>
-                <i class="fa fa-search fa-2x"></i>
+                <a class="text-decoration-none" href="#" onclick="openSearch()"><i class="fa fa-search fa-2x"></i></a>
             </div>
+
         </nav>
     </header>
 
+
     <div class="container">
+        <div style="height:55px"></div>
+        <div class="row h-100" id="searchBar">
+            <div class="col-12 my-auto">
+                <div class="row">
+                    <input class="form-control bg-warning text-white myinput" style="width:80%" type="text" name="search" placeholder="نام محصول ..." />
+                    <button class="btn btn-warning text-white border border-left" style="width:10%" type="submit" name="submit" value="جستجو"><i class="fa fa-search"></i></button>
+                    <a class="btn btn-warning text-white border border-left" style="width:10%" onclick="closeSearch()" href="#"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+        <div style="height:10px"></div>
     </div>
 
     <footer>
@@ -90,7 +103,11 @@
     <script src="~/lib/font-awesome/js/all.min.js"></script>
     <script src="~/lib/sidemenu/side_drawer.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
+    <script>
+        self.addEventListener('load', function () {
+            $("#searchBar").hide();
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

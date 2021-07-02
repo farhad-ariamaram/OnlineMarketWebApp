@@ -10,3 +10,11 @@
 		open(location, '_self').close();
 	}  
 }
+
+function openSearch() {
+	$("#searchBar").toggle();
+}
+
+function closeSearch() {
+	$("#searchBar").hide();
+}

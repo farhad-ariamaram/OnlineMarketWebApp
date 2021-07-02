@@ -255,3 +255,19 @@ body {
     margin: 1em 0;
     padding: 0;
 }
+
+.myinput{
+
+}
+    .myinput::placeholder { 
+        color: white;
+        opacity: 1;
+    }
+
+    .myinput:-ms-input-placeholder {
+        color: white;
+    }
+
+    .myinput::-ms-input-placeholder {
+        color: white;
+    }
