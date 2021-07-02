@@ -1,10 +1,11 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "خانه";
 }
 <div style="height:55px"></div>
 
+@* اسلایدر *@
 <div class="row">
     <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -29,6 +30,7 @@
     </div>
 </div>
 
+@* دسته بندی ها با باجت *@
 <div class="outer mt-1">
     <h3 class="ml-3"><span class="badge badge-pill badge-warning text-white"><span class="badge-text">نوشیدنی</span></span></h3>
     <h3 class="ml-3"><span class="badge badge-pill badge-warning text-white"><span class="badge-text">مواد غذایی</span></span></h3>
@@ -38,15 +40,21 @@
     <h3 class="ml-3"><span class="badge badge-pill badge-warning text-white"><span class="badge-text">ابزار و ملزومات</span></span></h3>
 </div>
 
+
+@* بنر بزرگ *@
 <div class="row mt-2">
     <img src="/img/banner1.png" class="rounded mx-auto d-block carousel-item" alt="...">
 </div>
 
+
+@* دو بنر کنار هم *@
 <div class="row mt-2">
     <div class="col-6"><img src="/img/banner2.png" class="rounded mx-auto d-block carousel-item" alt="..."></div>
     <div class="col-6"><img src="/img/banner3.png" class="rounded mx-auto d-block carousel-item" alt="..."></div>
 </div>
 
+
+@* کامپوننت بیشترین فروش *@
 <div class="row bg-success mt-2 rounded h-100">
     <div class="col-4 align-self-center">
         <div class="row justify-content-center"><span class="text-white">بیشترین فروش</span></div>
@@ -101,6 +109,8 @@
     </div>
 </div>
 
+
+@* دسته بندی های کارتی *@
 <div class="row pt-2">
     <div class="col-12">
         <div>دسته بندی</div>
@@ -137,6 +147,8 @@
     </div>
 </div>
 
+
+@* کامپوننت بیشترین تخفیف *@
 <div class="row bg-warning mt-2 rounded h-100">
     <div class="col-4 align-self-center">
         <div class="row justify-content-center"><span class="text-white">بیشترین تخفیف</span></div>
@@ -192,10 +204,13 @@
 </div>
 
 
+@* بنر *@
 <div class="row mt-2">
     <img src="/img/banner4.png" class="rounded mx-auto d-block carousel-item" alt="...">
 </div>
 
+
+@* بنر *@
 <div class="row mt-2">
     <img src="/img/banner1.png" class="rounded mx-auto d-block carousel-item" alt="...">
 </div>
