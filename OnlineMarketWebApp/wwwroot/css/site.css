@@ -225,6 +225,10 @@ body {
 .fs20 {
     font-size: 20px;
 }
+.fs15 {
+    font-size: 15px;
+}
+
 
 
 
@@ -256,6 +260,15 @@ body {
     height: 1px;
     border: 0;
     border-top: 1px solid #FFB64D;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.my-hr2 {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px dotted #bbbbbb;
     margin: 1em 0;
     padding: 0;
 }
