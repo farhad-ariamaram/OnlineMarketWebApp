@@ -223,3 +223,8 @@ body {
         float: none;
         display: inline-block;
     }
+
+
+.my-round {
+    border-radius: 16px;
+}
