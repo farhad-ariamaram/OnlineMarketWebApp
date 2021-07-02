@@ -1,5 +1,23 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿@font-face {
+    font-family: 'Yekan';
+    src: url('../font/Yekan.woff') format('woff');
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Yellowtail-Regular';
+    src: url('../font/Yellowtail-Regular.ttf') format('truetype');
+}
+
+* {
+    font-family: Yekan
+}
+
+.eng {
+    font-family: Yellowtail-Regular
+}
+ 
+/*-------------------------------------------------------------------------*/
 
 a.navbar-brand {
   white-space: normal;
